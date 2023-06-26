@@ -1,0 +1,103 @@
+{% extends "auctions/layout.html" %}
+
+
+{% block body %}
+    <h2>{{list.title}}</h2>
+    <div  class="dlist2">
+
+    <div class="card2" style="width: 24rem;">
+        <img src="{{ list.url }}" class="card-img-top2" alt="{{list.category}}">
+        <div class="card-body">
+          <h3 class="card-title">{{list.title}} <small>{{list.startbid}}$</small></h3>
+       
+          <p class="card-text">{{list.discription}}</p>
+
+          {% if bid %}
+          {% if list.active %}
+          <p class="mxbid">Max Bid  {{list.maxbid}}$ by {{list.maxbidonwer}}</p>
+          {% else %}
+          <h5 class="mxbid">***Bidding Won by {{list.maxbidonwer}} at {{list.maxbid}}$***</h5>
+          {% endif %}
+          {% endif %}
+          
+
+
+
+          
+
+        </div>
+      </div>
+
+      
+      <div class="dlist3">
+        <div class="cmt">
+            
+
+            {% if comments|length > 0 %}
+        
+        <!-- <label>Comments</label> -->
+        <div class="cdiv">
+            {%for comment in comments%}
+            {% if comment.commentlist == list.id %}
+            <small><strong>{{comment.comment}}</strong> ~ {{comment.commentowner}}</small>
+            {% endif %}
+            {%endfor%}
+          </div>
+          {% else %}
+
+          {% endif %}
+        </div>
+
+      
+ 
+        {% if user.is_authenticated %}
+        <form class="bidcom" action="{% url 'addcomment' %}"method="post">
+          {% csrf_token %}
+        <input class="bidinpt" autofocus class="form-control" type="text" name="comment" placeholder="Add any Comment!">
+      <input type="number" name="listid1" class="hidden" value="{{list.id}}" >
+        <button class="bidb" type="submit" >Add Comment</button>
+      </form>
+
+      {%if list.active %}
+      <form class="bidcom" action="{% url 'addbid' %}" method="post">
+        {% csrf_token %}
+        <input class="bidinpt" autofocus class="form-control" type="number" name="bid" placeholder="Add your Bid!">
+        <input type="number" class="hidden" name="listid2" value="{{list.id}}" >
+        <button class="bidb" type="submit" >Add Bid</button>
+      </form>
+      
+
+      <form class="bidcom" action="{% url 'watchlist' %}" method="post">
+        {% csrf_token %}
+     
+        <input type="number" class="hidden" name="listid3" value="{{list.id}}" >
+
+        {% if find %}
+        <button class="bidb" type="submit" >Add To WatchList</button>
+        {% else %}
+        <button class="bidb" type="submit" >Remove From WatchList</button>
+        {% endif %}
+      </form>
+     
+      {% if endbid %}
+      
+      <form class="bidcom" action="{% url 'endbid' list.id %}" method="post">
+        {% csrf_token %}
+        <button class="bidb" type="submit" >End Biding</button>
+      </form>
+        {% endif %}
+
+      {%else%}
+      {%endif%}
+      
+
+        {% endif %}
+
+
+
+
+      </div>
+</div> 
+
+
+{% endblock %}

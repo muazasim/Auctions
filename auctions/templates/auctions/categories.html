@@ -1,0 +1,17 @@
+{% extends "auctions/layout.html" %}
+
+
+{% block body %}
+    <h2>Categories</h2>
+    <div id="cat" class="dlist">
+   {% if empty%}
+        <h4 class="mxbid" >Nothing To Show Here !</h4>
+    {%else%}
+        {%for category in categories%}
+
+    <li><a id="c" href="{% url 'displaycategories' category %}" class="mxbid">{{category}}</a></li>
+     
+    {%endfor%}
+ {%endif%}
+</div> 
+{% endblock %}

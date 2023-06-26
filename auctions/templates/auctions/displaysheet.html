@@ -1,0 +1,42 @@
+
+    {% extends "auctions/layout.html" %}
+
+{% block body %}
+
+
+
+<form enctype="multipart/form-data" method="post">
+    {% csrf_token %}
+<input  class="fileinput" name="myfile" type="file" accept=".xls, .xlsx, application/vnd.ms-excel">
+<select name="label"  >
+    <option value="1">A</option>
+    <option value="2">B</option>
+    <option value="3">C</option>
+    <option value="4">D</option>
+    <option value="5">E</option>
+  </select>
+<select name="amounts" multiple>
+    <option value="1">A</option>
+    <option value="2">B</option>
+    <option value="3">C</option>
+    <option value="4">D</option>
+    <option value="5">E</option>
+  </select>
+<button class="submit" type="submit" >upload file</button>
+</form>
+<!-- <div class="table-responsive">
+<table class="table">
+    {% for row in table_data %}
+        <tr scope="row">
+        {% for cell in row %}
+            <td>{{ cell }}</td>
+        {% endfor %}
+         </tr>
+    {% endfor %}
+    </table>
+</div> -->
+<!-- {{ html_table|safe }} -->
+
+
+
+{% endblock %}

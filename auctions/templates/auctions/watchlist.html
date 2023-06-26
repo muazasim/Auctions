@@ -1,0 +1,53 @@
+{% extends "auctions/layout.html" %}
+
+
+{% block body %}
+    <h2>WatchList</h2>
+    <div class="dlist">
+      {%if empty%}
+      <h4 class="mxbid">Nothing To Show Here !</h4>
+      {%else%}
+
+
+    {%for list in Listings%}
+    {% if list.active%}
+    <div class="card" style="width: 24rem;">
+      <a class="visitlisting" href="{% url 'visitlisting' list.id %}">
+        <img src="{{ list.url }}" class="card-img-top" alt="{{list.category}}">
+        <div class="card-body">
+          <h3 class="card-title">{{list.title}} <small>{{list.startbid}}$</small></h3>
+          <p class="card-text">{{list.discription}}</p>
+            
+         {% if list.maxbid > zero %}
+         <small class="mxbid">Max Bid  {{list.maxbid}}$ by {{list.maxbidonwer}}</small>
+         {% endif %}
+          
+          {% if comments|length > 0 %}
+        <!-- <p>{{list.active}}</p> -->
+            <!-- <label>Comments</label> -->
+            {%for comment in comments%}
+                {% if comment.commentlist == list.id %}
+                <small><strong>{{comment.comment}}</strong> ~ {{comment.commentowner}}</small>
+                {% endif %}
+          {%endfor%}
+         {% else %}
+
+         {% endif %}
+       
+          {%for comment in comments%}
+     
+          {%endfor%}
+
+        </div>
+      </a>
+      </div>
+    
+       
+    {%endif%}
+
+
+     
+    {%endfor%}
+ {%endif%}
+</div> 
+{% endblock %}

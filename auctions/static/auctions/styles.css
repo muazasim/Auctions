@@ -1,0 +1,314 @@
+body {
+    padding: 10px;
+    background: #2C2C2C;
+    color: #FDFDFF;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Segoe UI';
+    flex-wrap: nowrap;
+}
+.navbr{
+    width: 17%;
+    font-family: 'Segoe UI';
+
+    /* margin-right: 33px; */
+    /* align-self: center; */
+    text-align: left;
+  margin-top: -3px;
+  background-color: #131313;
+  padding: 22px;
+  padding-right:55px ;
+  border-radius: 20px;
+  border: 1px solid #1E1E1E;
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.45);
+  min-width: 222px;
+margin-right: 20px;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   position: fixed
+   
+}
+.main{
+    width:70%;
+    margin-top: 20px;
+    position:relative;
+    margin-left: 22%;
+    align-items: center;
+    justify-content: center;
+}
+.user{
+    width: 10%;
+    margin-top: 20px;
+    position:relative;
+}
+.navleft{
+
+display: flex;
+flex-direction: column;
+
+color: #F65B6E;
+}
+.navitem{
+    text-decoration: none;
+}
+
+.navitemlink{
+    
+    margin-top: 10px;
+    font-size: large;
+    color: #fdfdffd4;
+
+}
+
+
+.listingdiv{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.navitemlink:hover{
+    color: #F65B6E;
+    text-decoration: none;
+    
+}
+.navitemlink:active{
+    color: #F65B6E;
+    text-decoration: none;
+}
+
+h1{
+    color: #FDFDFF;
+    margin-bottom: 23%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h2{
+    color: #F65B6E;
+    margin-left: 36%;
+    margin-bottom: 5%;
+}
+.listingdiv{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2%;
+   
+}
+label{
+    margin-left: 4px;
+    color: #FDFDFF;
+    font-size: large;
+    font-family: 'Segoe UI';
+}
+.textfield1{
+    width: 80%;
+    margin-left:4px ;
+    background-color: #2C2C2C;
+    color: #FDFDFF;
+    border-radius: 6px;
+ 
+}
+.textfield2{
+    width: 80%;
+    height: 100px;
+    border-radius: 10;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    background-color: #2C2C2C;
+    color: #FDFDFF;
+}
+.url{
+    width: 80%;
+    margin-bottom: 8px;
+
+    background-color: #2C2C2C;
+    color: #FDFDFF;
+}
+.submit{
+    background-color: #F65B6E;
+    color: #FDFDFF;
+    width: 80%;
+    border-radius: 13px;
+    margin-top: 2%;
+
+}
+
+.form{
+    display: flex;
+flex-direction: column;
+margin-top: 70px;
+margin-left: 10%;
+width: 100%;
+}
+.card{
+    background-color:#131313;
+    border-radius: 20px;
+    border: 1px solid #1E1E1E;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.45);
+    margin-left: 7%;
+    margin-top: 2%;
+    margin-top: 5%;
+}
+.card2{
+    background-color:#131313;
+    border-radius: 20px;
+    /* border: 1px solid #1E1E1E;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.45); */
+    margin-left: 0%;
+    margin-top: 0%;
+    /* width: 55%; */
+}
+
+.card-title{
+    color: #fdfdffd4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.dlist{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.bidinpt{
+    background-color: #131313;
+    width: 80%;
+    color: #fdfdff93;
+    border-radius: 9px;
+    margin-left: 7%;
+    margin-top: 2%;
+
+}
+.bidcom{
+    margin-bottom: 4%;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+}
+.bidb{
+    background-color: #F65B6E;
+    color: #FDFDFF;
+    border: 3px solid #F65B6E;
+    border-radius: 7px;
+   width: 80%;
+   height: 25px;
+   margin-top: 4%;
+   margin-left: 7%;
+   margin-bottom: -7%;
+   padding-top: 0px;
+   padding-bottom: 15px;
+}
+.card-img-top
+{
+    /* min-height: 230px; */
+    max-height: 230px;
+}
+.card-img-top2
+{
+    /* min-height: 260px; */
+    max-height: 260px;
+    width: 110%;
+}
+.hidden{
+    display: none;
+}
+
+
+
+
+/* EXCEL SHEET WORK  */
+
+
+#table{
+    background-color: #FDFDFF;
+    max-width: 100%;
+}
+tr{
+    max-width: 100%;
+    background-color: #FDFDFF;
+    color: #2C2C2C;
+}
+
+
+#fileinput{
+    width: 100%;
+    border-radius: 13px;
+    color:  #131313;
+    background-color: #FDFDFF;
+}
+small{
+    font-size:75%;
+}
+
+.visitlisting{
+    text-decoration: none;
+    color: #fdfdffd4;
+    margin-bottom: 2%;
+}
+
+.visitlisting:hover{
+    color: #fdfdffd4;
+    text-decoration: none;
+    
+}
+
+
+.title{
+    display: flex;
+    flex-direction: column;
+    width:28%;
+}
+
+.dlist2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: #131313;
+    border: 3px solid #1E1E1E;
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.45);
+  border-radius: 30px;
+}
+.dlist3{
+    display: flex;
+    flex-direction:column;
+    flex-wrap: nowrap;
+    width: 45%;
+    margin-top: 1%;
+    margin-left:9%;
+    background-color: #131313;
+}
+
+.cmt{
+    margin-left: 7%;
+}
+.bid{
+    color: #F65B6E;
+}
+.mxbid{
+ 
+    color: #F65B6E;
+}
+
+.cdiv{
+    display: flex;
+    flex-direction: column;
+}
+#cat{
+    display: flex;
+    flex-direction: column;
+}
+#c{
+    color: #fdfdffd4;  
+    text-decoration: none;
+    font-size: 1.3rem;
+    margin-bottom: 4%
+}
+#c:hover{
+    color: #F65B6E; 
+    text-decoration: none;
+}
+li{
+    color: #fdfdffd4; 
+
+}
